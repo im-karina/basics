@@ -49,13 +49,4 @@ func Load() {
 	}
 
 	ListenAddr = ":3000"
-
-	HttpsCertPath, ok = os.LookupEnv("HTTPS_CERT_PATH")
-	if IsProd && !ok {
-		log.Fatalln("missing env var HTTPS_CERT_PATH")
-	}
-	HttpsKeyPath, ok = os.LookupEnv("HTTPS_KEY_PATH")
-	if IsProd && !ok {
-		log.Fatalln("missing env var HTTPS_KEY_PATH")
-	}
 }
